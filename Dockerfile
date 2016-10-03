@@ -12,7 +12,7 @@ ARG VCS_REF
 
 #Metadata information.
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/breakingpitt/docker-packer"
+      org.label-schema.vcs-url="https://github.com/breakingpitt/docker-terraform"
 
 # Update the apt indexes and install the required software.
 # Following the best practices for Dockerfiles we do all the apt stuff
