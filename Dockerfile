@@ -7,6 +7,9 @@ MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
 # Set environment variables for non interactive.
 ENV DEBIAN_FRONTEND noninteractive
 
+# Set environment variable for downloading terraform version.
+ENV TERRAFORM_VERSION=0.7.5
+
 # build-time variables.
 ARG VCS_REF
 
@@ -21,9 +24,9 @@ RUN apt-get update \
     && apt-get install -y wget unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && wget -P /tmp/ https://releases.hashicorp.com/terraform/0.7.4/terraform_0.7.4_linux_amd64.zip \
+    && wget -P /tmp/ https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip \
     && mkdir -p /opt/terraform \
-    && unzip /tmp/terraform_0.7.4_linux_amd64.zip -d /opt/terraform 
+    && unzip /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /opt/terraform 
 
 # Volume to store Terraform data.
 VOLUME ["/data"]
