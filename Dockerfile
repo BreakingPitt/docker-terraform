@@ -8,7 +8,7 @@ MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 # Set environment variable for downloading terraform version.
-ENV TERRAFORM_VERSION=0.7.8
+ENV TERRAFORM_VERSION=0.7.9
 
 # build-time variables.
 ARG VCS_REF
