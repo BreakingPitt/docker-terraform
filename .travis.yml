@@ -5,3 +5,6 @@ services:
 script:
   - docker build -t breakingpitt/terraform-alpine alpine
   - docker build -t breakingpitt/terraform-ubuntu ubuntu
+git:
+  depth: 3
+
