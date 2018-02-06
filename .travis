@@ -1,0 +1,7 @@
+language: generic
+sudo: required
+services:
+  - docker
+script:
+  - docker build -t breakingpitt/vault-alpine alpine
+  - docker build -t breakingpitt/vault-ubuntu ubuntu
