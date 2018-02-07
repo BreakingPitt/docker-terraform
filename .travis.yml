@@ -7,4 +7,8 @@ script:
   - docker build -t breakingpitt/terraform-ubuntu ubuntu
 git:
   depth: 3
+  submodules: false
+branches:
+  only:
+    - master
 
